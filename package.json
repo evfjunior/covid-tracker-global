@@ -1,6 +1,6 @@
 {
   "name": "CovidTrackerGlobal",
-  "version": "0.0.1-20200714-6ca08a0-alpha",
+  "version": "0.0.1-20200714-042c6b7-alpha",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -13,6 +13,7 @@
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.7.0",
     "@react-navigation/stack": "^5.7.0",
+    "apisauce": "^1.1.1",
     "react": "16.13.1",
     "react-native": "0.63.0",
     "react-native-gesture-handler": "^1.6.1",
