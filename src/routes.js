@@ -39,7 +39,13 @@ const Routes = () => {
           component={Main}
           options={{ title: 'COVID Tracker' }}
         />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={({ route }) => ({
+            title: route.params.locationName,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
