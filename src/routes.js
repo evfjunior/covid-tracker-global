@@ -14,6 +14,7 @@ const Routes = () => {
   const textProps = {
     style: {
       color: theme.textColor,
+      fontFamily: theme.fontText,
     },
   }
 
@@ -27,7 +28,7 @@ const Routes = () => {
           headerTintColor: theme.textColor,
           headerTitleAlign: 'center',
           headerStyle: { backgroundColor: theme.accent },
-          headerTitleStyle: { fontFamily: '' },
+          headerTitleStyle: { fontFamily: theme.fontText },
         }}>
         <Stack.Screen
           name="Main"

@@ -13,6 +13,8 @@ const theme = {
   background: colors.black,
   backgroundLight: colors.gray,
   backgroundSemiTransparent: colors.blackGlass,
+  fontText: 'Kanit-Light',
+  fontNumeric: 'Rajdhani-SemiBold',
   textColor: colors.white,
 }
 

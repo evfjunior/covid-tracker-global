@@ -16,10 +16,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#212121',
     justifyContent: 'center',
   },
-
-  text: {
-    color: '#fafafa',
-  },
 })
 
 export default Details

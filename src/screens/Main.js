@@ -1,6 +1,8 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native'
 
+import theme from '../config/theme'
+
 const Main = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
@@ -18,20 +20,16 @@ const Main = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'royalblue',
-    borderRadius: 4,
+    backgroundColor: theme.accent,
     marginTop: 8,
     padding: 8,
   },
+
   container: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#212121',
     justifyContent: 'center',
-  },
-
-  text: {
-    color: '#fafafa',
   },
 })
 
