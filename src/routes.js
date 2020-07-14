@@ -2,6 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { setCustomText } from 'react-native-global-props'
+import Icon from 'react-native-vector-icons/Feather'
 
 import Main from './screens/Main'
 import Details from './screens/Details'
@@ -18,6 +19,10 @@ const Routes = () => {
     },
   }
 
+  const backButton = () => (
+    <Icon name={'chevron-left'} size={24} color={theme.textColor} />
+  )
+
   setCustomText(textProps)
 
   return (
@@ -29,6 +34,7 @@ const Routes = () => {
           headerTitleAlign: 'center',
           headerStyle: { backgroundColor: theme.accent },
           headerTitleStyle: { fontFamily: theme.fontText },
+          headerBackImage: backButton,
         }}>
         <Stack.Screen
           name="Main"
