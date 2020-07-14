@@ -20,6 +20,11 @@ const strings = {
   loaderText: 'Loading...',
 
   pickerLabel: 'Select a country or region',
+
+  timestamp: {
+    format: 'yyyy-MM-dd HH:mm',
+    title: 'Last updated at:',
+  },
 }
 
 export default strings

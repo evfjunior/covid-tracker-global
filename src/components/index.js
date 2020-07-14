@@ -7,6 +7,7 @@ import Picker from './Picker'
 import RoundButton from './RoundButton'
 import Table from './Table'
 import TextBox from './TextBox'
+import TimeStamp from './TimeStamp'
 
 export {
   Card,
@@ -18,4 +19,5 @@ export {
   RoundButton,
   Table,
   TextBox,
+  TimeStamp,
 }

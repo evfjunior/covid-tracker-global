@@ -7,6 +7,7 @@ import {
   Loader,
   Paper,
   Table,
+  TimeStamp,
 } from '../components'
 
 import api from '../services/api'
@@ -18,6 +19,7 @@ const Details = ({ route }) => {
   const [diff, setDiff] = useState([])
   const [hasError, setHasError] = useState(true)
   const [isLoading, setLoading] = useState(true)
+  const [lastUpdate, setLastUpdate] = useState('')
   const [status, setStatus] = useState([])
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const Details = ({ route }) => {
   const fetchStatusData = async () => {
     try {
       const response = await api.get(`/status/${locationCode}`)
-      const { cases, deaths, recovered } = await response.data
+      const { cases, deaths, last_update, recovered } = await response.data
 
       setStatus([
         {
@@ -47,6 +49,8 @@ const Details = ({ route }) => {
           value: recovered,
         },
       ])
+
+      setLastUpdate(last_update)
     } catch (response) {}
   }
 
@@ -96,6 +100,8 @@ const Details = ({ route }) => {
       </Paper>
 
       <Table data={diff} />
+
+      <TimeStamp datetime={lastUpdate} />
     </Container>
   )
 }
