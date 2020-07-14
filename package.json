@@ -1,6 +1,6 @@
 {
   "name": "CovidTrackerGlobal",
-  "version": "0.0.1-20200714-abb705a-alpha",
+  "version": "0.0.1-20200714-91d923e-alpha",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

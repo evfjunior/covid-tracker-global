@@ -6,12 +6,14 @@ import { setCustomText } from 'react-native-global-props'
 import Main from './screens/Main'
 import Details from './screens/Details'
 
+import theme from './config/theme'
+
 const Routes = () => {
   const Stack = createStackNavigator()
 
   const textProps = {
     style: {
-      color: '#fafafa',
+      color: theme.textColor,
     },
   }
 
@@ -21,10 +23,10 @@ const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          cardStyle: { backgroundColor: '#212121' },
-          headerTintColor: '#fafafa',
+          cardStyle: { backgroundColor: theme.background },
+          headerTintColor: theme.textColor,
           headerTitleAlign: 'center',
-          headerStyle: { backgroundColor: 'royalblue' },
+          headerStyle: { backgroundColor: theme.accent },
           headerTitleStyle: { fontFamily: '' },
         }}>
         <Stack.Screen

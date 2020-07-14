@@ -2,6 +2,8 @@ import 'react-native-gesture-handler'
 import React from 'react'
 import { StatusBar } from 'react-native'
 
+import theme from './config/theme'
+
 import Routes from './routes'
 
 const App = () => {
@@ -9,10 +11,9 @@ const App = () => {
     <>
       <StatusBar
         barStyle="light-content"
-        backgroundColor="transparent"
+        backgroundColor={theme.accentDark}
         translucent
       />
-
       <Routes />
     </>
   )
