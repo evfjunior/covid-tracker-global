@@ -4,10 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { setCustomText } from 'react-native-global-props'
 import Icon from 'react-native-vector-icons/Feather'
 
-import Main from './screens/Main'
-import Details from './screens/Details'
-
-import theme from './config/theme'
+import { Details, Main } from './screens'
+import { theme } from './config'
 
 const Routes = () => {
   const Stack = createStackNavigator()

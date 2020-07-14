@@ -1,36 +1,23 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/Feather'
 
-import theme from '../config/theme'
+import { Container, Picker, RoundButton, TextBox } from '../components'
+
+import LocationProvider from '../contexts/LocationContext'
+import { locations, strings, theme } from '../config'
 
 const Main = ({ navigation }) => {
+  const icon = <Icon name="chevrons-right" size={24} color={theme.textColor} />
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>MAIN SCREEN</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => {
-          navigation.navigate('Details')
-        }}>
-        <Text style={styles.text}>GO TO DETAILS</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <Container>
+      <LocationProvider>
+        <TextBox content={strings.introText} />
+        <Picker label={strings.pickerLabel} locations={locations} />
+        <RoundButton icon={icon} navigation={navigation} />
+      </LocationProvider>
+    </Container>
   )
 }
-
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: theme.accent,
-    marginTop: 8,
-    padding: 8,
-  },
-
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#212121',
-    justifyContent: 'center',
-  },
-})
 
 export default Main
