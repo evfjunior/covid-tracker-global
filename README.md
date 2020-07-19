@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/android/app/src/main/icon-playstore.png">
+    <img alt="Logo" title="#logo" width="100px" src="./android/app/src/main/icon-playstore.png">
     <br><br>
     <b>COVID Tracker (Global Version)</b>  
     <br>
